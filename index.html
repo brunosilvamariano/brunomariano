@@ -125,47 +125,106 @@
             <div class="row align-items-center">
                 <!-- Coluna da Imagem -->
                 <div class="col-12 col-md-5 mb-4 mb-md-0">
-                    <div class="about-img text-center">
-                        <img src="assets/images/img-lateral.png" alt="Minha Foto" class="img-fluid rounded-circle shadow-lg">
-                    </div>
+                    <figure class="about-img text-center">
+                        <img src="assets/images/img_about.png" alt="Minha Foto" class="img-fluid rounded-circle shadow-lg">
+                        <figcaption>Foto do desenvolvedor Front-End</figcaption>
+                    </figure>
                 </div>
-    
+                
                 <!-- Coluna do Texto -->
                 <div class="col-12 col-md-7">
-                    <h2 class="text-center text-md-start fw-bold mb-4">Sobre mim</h2>
+                    <header>
+                        <h2 class="text-center text-md-start fw-bold mb-4">Sobre mim</h2>
+                    </header>
+                    
                     <p class="lead text-light text-center text-md-start mb-4">
                         Sou um desenvolvedor Front-End apaixonado por criar experiências digitais únicas. Gosto de trabalhar com
                         tecnologias modernas e soluções criativas para tornar cada projeto especial.
                     </p>
+                    
+                    <!-- Seção de Habilidades -->
+                    <section>
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <header>
+                                    <h3 class="h5 text-light">Habilidades</h3>
+                                </header>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle"></i> HTML, CSS, JavaScript</li>
+                                    <li><i class="bi bi-check-circle"></i> React, Vue.js</li>
+                                    <li><i class="bi bi-check-circle"></i> Git & GitHub</li>
+                                    <li><i class="bi bi-check-circle"></i> Responsividade e Acessibilidade</li>
+                                </ul>
+                            </div>
     
-                    <div class="row">
-                        <div class="col-6 mb-3">
-                            <h3 class="h5 text-light">Habilidades</h3>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle"></i> HTML, CSS, JavaScript</li>
-                                <li><i class="bi bi-check-circle"></i> React, Vue.js</li>
-                                <li><i class="bi bi-check-circle"></i> Git & GitHub</li>
-                                <li><i class="bi bi-check-circle"></i> Responsividade e Acessibilidade</li>
-                            </ul>
+                            <!-- Seção de Ferramentas -->
+                            <div class="col-6 mb-3">
+                                <header>
+                                    <h3 class="h5 text-light">Ferramentas</h3>
+                                </header>
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-circle"></i> VS Code, Figma</li>
+                                    <li><i class="bi bi-check-circle"></i> Bootstrap, Tailwind CSS</li>
+                                    <li><i class="bi bi-check-circle"></i> Node.js, NPM</li>
+                                    <li><i class="bi bi-check-circle"></i> Jest, Cypress</li>
+                                </ul>
+                            </div>
                         </div>
-    
-                        <div class="col-6 mb-3">
-                            <h3 class="h5 text-light">Ferramentas</h3>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle"></i> VS Code, Figma</li>
-                                <li><i class="bi bi-check-circle"></i> Bootstrap, Tailwind CSS</li>
-                                <li><i class="bi bi-check-circle"></i> Node.js, NPM</li>
-                                <li><i class="bi bi-check-circle"></i> Jest, Cypress</li>
-                            </ul>
-                        </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </div>
-    </section>
-    
-    
+      </section>
       <!--FIM ABOUT-->
+      <!--INICIO PORTFOLIO-->
+      <section id="portfolio" class="portfolio py-5" style="background-color: #343a40;">
+        <div class="container">
+            <header>
+                <h2 class="text-center mb-5">Meu Portfólio</h2>
+            </header>
+            <div class="row">
+                <!-- Projeto 1 -->
+                <article class="col-md-4 mb-4">
+                    <figure class="portfolio-item position-relative">
+                        <img src="assets/images/breve.png" alt="Descrição do Projeto 1" class="img-fluid rounded">
+                        <figcaption class="portfolio-description position-absolute w-100 text-center p-3">
+                            <p>Descrição curta do Projeto 1 - Desenvolvimento de um site para portfólio.</p>
+                        </figcaption>
+                        <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                            <a href="detalhes_projeto1.html" class="portfolio-link text-white" target="_blank" aria-label="Ver detalhes do Projeto 1">Ver Detalhes</a>
+                        </div>
+                    </figure>
+                </article>
+                
+                <!-- Projeto 2 -->
+                <article class="col-md-4 mb-4">
+                    <figure class="portfolio-item position-relative">
+                        <img src="assets/images/breve.png" alt="Descrição do Projeto 2" class="img-fluid rounded">
+                        <figcaption class="portfolio-description position-absolute w-100 text-center p-3">
+                            <p>Descrição curta do Projeto 2 - Criação de landing page responsiva.</p>
+                        </figcaption>
+                        <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                            <a href="detalhes_projeto2.html" class="portfolio-link text-white" target="_blank" aria-label="Ver detalhes do Projeto 2">Ver Detalhes</a>
+                        </div>
+                    </figure>
+                </article>
+                
+                <!-- Projeto 3 -->
+                <article class="col-md-4 mb-4">
+                    <figure class="portfolio-item position-relative">
+                        <img src="assets/images/breve.png" alt="Descrição do Projeto 3" class="img-fluid rounded">
+                        <figcaption class="portfolio-description position-absolute w-100 text-center p-3">
+                            <p>Descrição curta do Projeto 3 - Desenvolvimento de uma aplicação web com React.</p>
+                        </figcaption>
+                        <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                            <a href="detalhes_projeto3.html" class="portfolio-link text-white" target="_blank" aria-label="Ver detalhes do Projeto 3">Ver Detalhes</a>
+                        </div>
+                    </figure>
+                </article>
+            </div>
+        </div>
+      </section>
+      <!--FIM PORTFOLIO-->
 
     </main>
     

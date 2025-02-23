@@ -6,7 +6,7 @@ Variáveis Globais de Cores
   --cor-fundo-header: #ffffff; /* Fundo secundário */
   --cor-texto: #ffffff; /* Cor do texto - Branco */
   --cor-destaque: #e63946; /* Cor de destaque - Vermelho */
-  --cor-secundaria: #2a9d8f; /* Cor de destaque secundária - Verde */
+  --cor-secundaria: #1877f2; /* Cor de destaque secundária - Verde */
   --cor-cinza: #f1faee; /* Cor cinza para detalhes - Cinza claro */
   --cor-cinza-escuro: #333333; /* Cor para bordas e fundo de cards */
   --cor-facebook: #1877f2; /* Azul do Facebook */
@@ -90,7 +90,7 @@ body {
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 .navbar-nav .nav-item .nav-link:hover {
-  color: var(--cor-destaque);
+  color: var(--cor-secundaria);
 }
 /* Menu Hambúrguer */
 .navbar-toggler {
@@ -145,7 +145,7 @@ body {
   color: var(--cor-texto);
 }
 .home h1 span {
-  color: var(--cor-destaque);
+  color: var(--cor-secundaria);
 }
 .home p {
   font-size: 1.2rem;
@@ -155,7 +155,7 @@ body {
 .home img {
   max-width: 300px;
   height: auto;
-  border: 5px solid var(--cor-destaque);
+  border: 5px solid var(--cor-secundaria);
 }
 /* Estilo dos ícones sociais */
 .social-icons {
@@ -189,7 +189,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .btn-light:hover {
-  background-color: var(--cor-destaque);
+  background-color: var(--cor-secundaria);
   color: white;
   transform: scale(1.05);
 }
@@ -262,7 +262,7 @@ body {
 /* Títulos e Subtítulos */
 #about h2 {
   font-size: 2.5rem;
-  color: var(--cor-destaque);
+  color: var(--cor-secundaria);
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -288,7 +288,7 @@ body {
   margin-bottom: 10px;
 }
 #about ul li i {
-  color: var(--cor-destaque);
+  color: var(--cor-secundaria);
   margin-right: 10px;
 }
 /* Responsividade */
@@ -384,5 +384,119 @@ body {
       width: 40px;
       height: 40px;
       font-size: 1.2rem;
+  }
+}
+/* Estilo da Seção de Portfólio */
+/* Estilos do Portfólio */
+#portfolio {
+  background-color: var(--cor-fundo); /* Cor de fundo */
+  padding: 5rem 0;
+}
+
+#portfolio h2 {
+  font-size: 2.5rem;
+  color: var(--cor-secundaria);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05); /* Leve zoom no hover */
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparente */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--cor-texto);
+  font-size: 0.9rem;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--cor-texto);
+  font-size: 1.1rem;
+  border: 2px solid var(--cor-secundaria);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-link:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fundo); /* Texto branco ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  #portfolio h2 {
+    font-size: 2rem;
+  }
+
+  .portfolio-item img {
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    margin-bottom: 20px;
+  }
+
+  .portfolio-item img {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 576px) {
+  #portfolio h2 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-item img {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .portfolio-link {
+    font-size: 1rem;
+    padding: 8px 15px;
   }
 }
