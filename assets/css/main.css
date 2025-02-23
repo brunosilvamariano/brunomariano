@@ -1,263 +1,388 @@
+/* -------------------------------
+Variáveis Globais de Cores
+------------------------------- */
 :root {
-    /* Cores principais */
-    --cor-primaria: #4192fc; /* Azul padrão */
-    --cor-fundo: #ffffff;
-    --cor-menu: #232323;
-    --cor-texto-principal: #EAEAEA;
-    --cor-texto-secundario: #B0B0B0;
-
-    /* Cores de título e hover */
-    --cor-titulo: var(--cor-texto-principal);
-    --cor-hover: #ffd700; /* Amarelo para hover */
-
-    /* Cores para botões */
-    --cor-botao: var(--cor-primaria);
-    --cor-botao-hover: var(--cor-hover);
-
-    /* Cores específicas de ícones de redes sociais */
-    --cor-github: #171515;
-    --cor-linkedin: #0077b5;
-    --cor-instagram: #e1306c;
-    --cor-facebook: #1877f2;
-    --cor-whatsapp: #25d366;
-
-    /* Outras cores */
-    --cor-erro: #B22222;
-    --cor-sucesso: #2E8B57;
-
-    /* Tons de cinza */
-    --cor-cinza-claro: #A9A9A9;
-    --cor-cinza-medio: #6C757D;
-    --cor-cinza-escuro: #343A40;
-    --cor-cinza-mais-escuro: #212529;
-
-    /* Espaçamentos */
-    --espacamento-secao: 80px;
+  --cor-fundo: #000000; /* Fundo principal - Preto */
+  --cor-fundo-header: #ffffff; /* Fundo secundário */
+  --cor-texto: #ffffff; /* Cor do texto - Branco */
+  --cor-destaque: #e63946; /* Cor de destaque - Vermelho */
+  --cor-secundaria: #2a9d8f; /* Cor de destaque secundária - Verde */
+  --cor-cinza: #f1faee; /* Cor cinza para detalhes - Cinza claro */
+  --cor-cinza-escuro: #333333; /* Cor para bordas e fundo de cards */
+  --cor-facebook: #1877f2; /* Azul do Facebook */
+  --cor-twitter: #1da1f2; /* Azul do Twitter */
+  --cor-linkedin: #0077b5; /* Azul do LinkedIn */
+  --cor-instagram: #c32aa3; /* Roxo do Instagram */
+  --cor-botao: #f4a261; /* Laranja claro para o botão */
+  --cor-botao-hover: #e76f51; /* Laranja escuro para o hover do botão */
+  --fonte-principal: 'Roboto', sans-serif; /* Fonte principal (Google Fonts) */
+  --fonte-secundaria: 'Lora', serif; /* Fonte secundária para títulos */
+  --font-size-titulo: 2rem; /* Tamanho do título */
+  --font-size-subtitulo: 1.5rem; /* Tamanho do subtítulo */
+  --font-size-paragrafo: 1rem; /* Tamanho do parágrafo */
+  --font-size-botao: 1.2rem; /* Tamanho do texto do botão */
+  --font-size-titulo-responsive: 5vw; /* Responsivo título */
+  --font-size-subtitulo-responsive: 4vw; /* Responsivo subtítulo */
+  --font-size-paragrafo-responsive: 3vw; /* Responsivo parágrafo */
+  --font-size-botao-responsive: 4vw; /* Responsivo botão */
 }
-
-
+/* Estilos globais */
 * {
-    text-decoration: none;
-    list-style-type: none;
-    border: none;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
-
+/* Body */
 body {
-    padding-top: 0px; /* Ajuste para header fixo */
-    overflow-x: hidden; /* Impede o scroll horizontal */
+  padding-top: 0px;
+  overflow-x: hidden;
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo); 
+  color: var(--cor-texto);
+  line-height: 1.5;
 }
-
-html {
-    overflow-x: hidden;
-    font-size: 87.5%; /* Base de 14px */
-    font-family: Poppins, sans-serif;
+/* Estilo do Header */
+.container {
+  border-radius: 50px;
+  padding: 10px;
 }
-
-/* Compensação do scroll para a altura do cabeçalho */
-section {
-    scroll-margin-top: 80px; /* Ajuste este valor conforme a altura do cabeçalho */
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 20px;  /* Mais espaço nas laterais */
+    padding-right: 20px;
+    margin-left: 20px;  /* Garantir que a margem também seja ajustada */
+    margin-right: 20px;
+  }
 }
-
-@media (max-width: 768px) {
-    section {
-        scroll-margin-top: 60px; /* Ajuste menor para dispositivos móveis */
-    }
+@media (max-width: 430px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 15px;  /* Ajuste para telas intermediárias */
+    margin-right: 15px;
+  }
 }
-
-/* Exemplo de conteúdo principal com padding para compensar o header fixo */
-.btn-custom {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente o ícone e o texto */
-    color: var(--cor-primaria);
-    padding: 12px 20px; /* Ajuste o preenchimento do botão */
-    border-radius: 50px; /* Botão arredondado */
-    border: 2px solid var(--cor-primaria);
-    font-weight: 600; /* Estilo de fonte mais forte */
-    font-size: 1.1rem; /* Tamanho da fonte do botão */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeitos de transição */
-    text-decoration: none; /* Remove sublinhado */
+@media (max-width: 376px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;  /* Menos padding e margem para telas muito pequenas */
+    margin-right: 10px;
+  }
 }
-.btn-custom:hover {
-    background-color: var(--cor-botao-hover);
-    color: #000000;
-    transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
+/* Ajuste para a logo e navbar */
+.navbar-brand .logo {
+  height: 40px;
+  width: auto;
+  /* Certifique-se de que a logo não ultrapasse as margens */
 }
-.btn-custom i {
-    font-size: 1.3rem; /* Tamanho do ícone */
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
+.navbar-nav {
+  padding-left: 0;
+  padding-right: 0;
+  /* Garante que os itens de navegação não fiquem muito próximos das bordas */
 }
-.nav-link:hover {
-    color: var(--cor-primaria) !important;
+.navbar-nav .nav-item .nav-link {
+  padding: 8px 15px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-/* Seção Home */
-.home-section {
-    position: relative;
-    height: 100vh; /* Altura da seção */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* Centraliza o texto */
+.navbar-nav .nav-item .nav-link:hover {
+  color: var(--cor-destaque);
 }
-
-/* Ajustes para a logo */
-.logo {
-    height: 40px;
-}
-
-/* Cor de fundo e bordas do botão de navegação */
+/* Menu Hambúrguer */
 .navbar-toggler {
-    border: none;
-    color: #fff;
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem;
 }
-
-/* Estilos para links de navegação */
-.navbar-nav .nav-link {
-    color: #fff;
-    transition: color 0.3s ease;
+.navbar-toggler:hover {
+  transform: none;
 }
-.navbar-nav .nav-link:hover {
-    color: #ffd700;
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-titulo-responsive);
+  }
+  h2 {
+    font-size: var(--font-size-subtitulo-responsive);
+  }
+  p {
+    font-size: var(--font-size-paragrafo-responsive);
+  }
+  button {
+    font-size: var(--font-size-botao-responsive);
+    padding: 12px 25px;
+  }
 }
-
-/*************************************HOME***********************************************/
-.btn-1 .btn {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente o ícone e o texto */
-    color: var(--cor-cinza-mais-escuro);
-    padding: 8px 15px; /* Ajuste o preenchimento do botão */
-    border-radius: 50px; /* Botão arredondado */
-    border: 2px solid var(--cor-cinza-mais-escuro);
-    font-weight: 600; /* Estilo de fonte mais forte */
-    font-size: 1rem; /* Tamanho da fonte do botão */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeitos de transição */
-    text-decoration: none; /* Remove sublinhado */
+/* Redes Sociais */
+.social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.5rem;
 }
-.btn-1 .btn:hover {
-    background-color: var(--cor-primaria);
-    border: 2px solid var(--cor-primaria);
-    color: #000000;
-    transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
+.instagram { background: var(--cor-instagram); }
+.linkedin { background: var(--cor-linkedin); }
+.facebook { background: var(--cor-facebook); }
+.github { background: var(--cor-cinza-escuro); }
+.whatsapp { background: #25D366; }
+/* Seção Home */
+.home {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95));
+  padding-top: 5rem;
 }
-.btn-1 .btn i {
-    font-size: 1.3rem; /* Tamanho do ícone */
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
+/* Ajuste do texto */
+.home h1 {
+  font-size: 3rem;
+  color: var(--cor-texto);
 }
-#home img {
-   width: 100%; /* Para que a imagem não ultrapasse a largura do seu container */
-    height: auto; /* Mantém a proporção original da imagem */
+.home h1 span {
+  color: var(--cor-destaque);
 }
-/***********************************Vantagens *************************************************/
-.icon-circle {
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    display: inline-block;
-    text-align: center;
-    line-height: 80px; /* Centraliza o ícone verticalmente */
+.home p {
+  font-size: 1.2rem;
+  color: var(--cor-cinza);
 }
-
+/* Ajuste da imagem */
+.home img {
+  max-width: 300px;
+  height: auto;
+  border: 5px solid var(--cor-destaque);
+}
+/* Estilo dos ícones sociais */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.social-icon {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+.social-icon:hover {
+  transform: scale(1.1);
+}
+/* Botão Download CV */
+.btn-light {
+  background-color: var(--cor-cinza);
+  color: var(--cor-cinza-escuro);
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.btn-light:hover {
+  background-color: var(--cor-destaque);
+  color: white;
+  transform: scale(1.05);
+}
+/* Responsividade */
+@media (max-width: 1200px) {
+  .home h1 {
+      font-size: 2.5rem;
+  }
+  .home p {
+      font-size: 1rem;
+  }
+}
+@media (max-width: 992px) {
+  .home h1 {
+      font-size: 2rem;
+  }
+  .home p {
+      font-size: 1.1rem;
+  }
+  .home img {
+      max-width: 250px;
+  }
+  .social-icon {
+      width: 45px;
+      height: 45px;
+      font-size: 1.3rem;
+  }
+}
 @media (max-width: 768px) {
-    .icon-circle {
-        height: 60px;
-        width: 60px;
-        line-height: 60px;
-    }
+  .home h1 {
+      font-size: 1.8rem;
+  }
+  .home p {
+      font-size: 1rem;
+  }
+  .social-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+  }
 }
-/***********************************Vantagens *************************************************/
-.card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 10px; /* Arredondar os cantos dos cartões */
+@media (max-width: 576px) {
+  .home h1 {
+      font-size: 1.5rem;
+  }
+  .home p {
+      font-size: 0.9rem;
+  }
+  .home img {
+      max-width: 200px;
+  }
+  .social-icon {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+  }
 }
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+/* Estilo Geral da Seção About */
+#about {
+  background-color: #121212;
+  color: var(--cor-texto);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-
-.icon-circle {
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    display: inline-block;
-    text-align: center;
-    line-height: 80px;
-    background-color: #4192fc; /* Fundo do ícone */
+.about-img img {
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
-
-.card-title {
-    font-size: 1.5rem;
+/* Títulos e Subtítulos */
+#about h2 {
+  font-size: 2.5rem;
+  color: var(--cor-destaque);
+  font-weight: bold;
+  margin-bottom: 30px;
 }
-
-.card-text {
-    font-size: 0.9rem;
-    color: #6c757d; /* Cor do texto */
+#about h3 {
+  font-size: 1.2rem;
+  color: var(--cor-texto);
+  font-weight: 500;
+  margin-bottom: 15px;
 }
-
-/* Estilo para o fundo do Pacote Business */
-.bg-primary {
-    background-color: #007bff !important; /* Azul mais escuro para o card */
+/* Textos */
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--cor-cinza);
 }
-
-/* Estilo para os ícones de verificação */
-.bi-check-circle-fill {
-    color: #28a745; /* Verde para ícones de verificação */
-    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+/* Listagem de Habilidades */
+#about ul {
+  padding-left: 20px;
 }
-
-.bg-light-subtle:hover{
-    border: 2px solid white!important;
+#about ul li {
+  font-size: 1rem;
+  color: var(--cor-cinza);
+  margin-bottom: 10px;
 }
-
-/*********************************** Serviços *************************************************/
-#services {
-    background-color: var(--cor-fundo);
+#about ul li i {
+  color: var(--cor-destaque);
+  margin-right: 10px;
 }
-
-#services h2 {
-    color: var(--cor-primaria);
-    font-size: 2.5rem;
-    font-weight: bold;
+/* Responsividade */
+@media (max-width: 1200px) {
+  #about h2 {
+      font-size: 2.2rem;
+  }
+  #about .about-img img {
+      max-width: 280px;
+  }
+  #about p {
+      font-size: 1.1rem;
+  }
+  /* Ajuste nas colunas para telas maiores */
+  #about .row {
+      text-align: left;
+  }
 }
-
-#services p {
-    color: var(--cor-texto-principal);
-    font-size: 1.1rem;
-    line-height: 1.6;
+@media (max-width: 992px) {
+  #about h2 {
+      font-size: 2rem;
+  }
+  #about p {
+      font-size: 1rem;
+  }
+  #about .about-img img {
+      max-width: 250px;
+  }
+  /* Reorganiza as colunas para se ajustarem em telas médias */
+  #about .col-md-7 {
+      text-align: center;
+      margin-top: 30px;
+  }
+  #about ul {
+      padding-left: 0;
+      text-align: center;
+  }
+  #about .row .col-md-6 {
+      margin-bottom: 20px;
+  }
 }
-
-/*********************************** Skills *************************************************/
-.card {
-    transition: transform 0.3s ease;
-    min-height: 350px; /* Altura mínima para manter todos os cards com o mesmo tamanho */
-    border: none;
+@media (max-width: 768px) {
+  #about h2 {
+      font-size: 1.8rem;
+  }
+  #about .about-img img {
+      max-width: 200px;
+  }
+  /* Ajustando as colunas para o layout em telas pequenas */
+  #about .col-md-5, #about .col-md-7 {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  #about ul {
+      padding-left: 0;
+      text-align: center;
+  }
+  /* Organizamos as colunas de habilidades em uma coluna única */
+  #about .row {
+      display: block;
+      margin-top: 20px;
+  }
+  #about .col-6 {
+      width: 100%;
+      text-align: center;
+      padding: 0 20px;
+  }
 }
-
-.card:hover {
-    transform: translateY(-10px); /* Elevação suave no hover */
-}
-
-.card-header {
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.card-header i {
-    font-size: 3rem; /* Tamanho grande para os ícones */
-}
-
-.card-body {
-    padding: 20px;
-    background-color: #f9f9f9; /* Fundo claro no corpo do card */
-    color: #333;
-}
-
-.card-body p {
-    margin-bottom: 0;
-    font-size: 1rem;
-    line-height: 1.6;
+@media (max-width: 576px) {
+  #about h2 {
+      font-size: 1.6rem;
+  }
+  #about .about-img img {
+      max-width: 180px;
+  }
+  #about p {
+      font-size: 0.9rem;
+  }
+  #about ul {
+      padding-left: 0;
+      text-align: center;
+  }
+  /* Certificando que as colunas de habilidades se alinhem em uma coluna única em telas pequenas */
+  #about .row {
+      display: block;
+      margin-top: 20px;
+  }
+  #about .col-6 {
+      width: 100%;
+      padding: 0;
+  }
+  #about .social-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+  }
 }
