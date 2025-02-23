@@ -387,9 +387,8 @@ body {
   }
 }
 /* Estilo da Seção de Portfólio */
-/* Estilos do Portfólio */
 #portfolio {
-  background-color: var(--cor-fundo); /* Cor de fundo */
+  background-color: #121212;
   padding: 5rem 0;
 }
 
@@ -398,12 +397,14 @@ body {
   color: var(--cor-secundaria);
   font-weight: bold;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .portfolio-item {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  margin-bottom: 1.5rem;
 }
 
 .portfolio-item img {
@@ -463,6 +464,16 @@ body {
 }
 
 /* Responsividade */
+@media (max-width: 1200px) {
+  #portfolio h2 {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-item img {
+    height: 300px;
+  }
+}
+
 @media (max-width: 992px) {
   #portfolio h2 {
     font-size: 2rem;
@@ -472,10 +483,22 @@ body {
     height: 250px;
     object-fit: cover;
   }
+
+  /* Ajusta a largura dos itens para 50% em telas menores */
+  .portfolio-item {
+    width: 48%;
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
+  #portfolio h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Cards em tela média ficam com 100% da largura */
   .portfolio-item {
+    width: 100%;
     margin-bottom: 20px;
   }
 
