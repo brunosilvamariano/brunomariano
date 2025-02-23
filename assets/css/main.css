@@ -655,3 +655,68 @@ body {
     padding: 6px 12px;
   }
 }
+/* Footer */
+/* Estilos do Footer */
+#footer {
+  background-color: var(--cor-fundo); /* Fundo escuro */
+  color: var(--cor-texto);
+  padding: 3rem 0;
+  font-size: 1rem;
+}
+
+#footer h3 {
+  color: var(--cor-secundaria) !important;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#footer p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--cor-cinza);
+}
+
+#footer a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#footer a:hover {
+  color: var(--cor-secundaria) !important;
+}
+
+/* Ícones das redes sociais */
+#footer .social-links a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#footer .social-links a:hover {
+  color: var(--cor-secundaria) !important;
+  transform: scale(1.2); /* Efeito de leve zoom no hover */
+}
+
+/* Direitos autorais */
+#footer .direitos p {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--cor-cinza);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #footer {
+    text-align: center;
+  }
+
+  #footer .social-links {
+    justify-content: center;
+  }
+
+  #footer .direitos p {
+    margin-top: 1rem;
+  }
+}
