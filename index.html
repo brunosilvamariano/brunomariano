@@ -32,8 +32,8 @@
     
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top py-3">
-            <div class="container bg-light">
+        <nav class="navbar navbar-expand-lg bg-dark-subtle fixed-top py-3">
+            <div class="container">
                 <!-- Logo fictícia -->
                 <a class="navbar-brand" href="#">
                     <img src="assets/images/logo.png" alt="Logo Bruno Mariano" class="logo">
@@ -69,209 +69,206 @@
     </header>
     
     <main>
-      <!--INICIO HOME-->
-      <header id="home" class="home d-flex align-items-center">
-          <div class="container">
-              <div class="row align-items-center">
-                  <!-- Coluna do Texto -->
-                  <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
-                      <h1 class="fw-bold">Olá, sou <span id="typed" class="text-primary"></span></h1>
-                      <p class="lead text-light">Desenvolvedor Front-End focado em criar sites e landing pages.</p>
-                      <a href="assets/docs/CV_Bruno_Mariano.pdf" class="btn btn-light btn-lg mt-3" download>Download CV</a>
-                  </div>
-        
-                  <!-- Coluna da Imagem -->
-                  <div class="col-12 col-md-6 text-center">
-                      <img src="assets/images/img-lateral.png" alt="Foto de Bruno Mariano, desenvolvedor Front-End" class="rounded-circle img-fluid shadow-lg">
-                        
-                      <!-- Redes Sociais -->
-                      <nav aria-label="Redes sociais" class="social-icons mt-4">
-                          <ul class="list-unstyled d-flex justify-content-center gap-3">
-                              <li>
-                                  <a href="https://www.instagram.com/" class="social-icon instagram" aria-label="Instagram">
-                                      <i class="fab fa-instagram"></i>
-                                  </a>
-                              </li>
-                              <li>
-                                    <a href="https://www.linkedin.com/" class="social-icon linkedin" aria-label="LinkedIn">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                  <a href="https://www.facebook.com/" class="social-icon facebook" aria-label="Facebook">
-                                      <i class="fab fa-facebook"></i>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="https://github.com/" class="social-icon github" aria-label="GitHub">
-                                      <i class="fab fa-github"></i>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="https://wa.me/5547991597258" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp">
-                                      <i class="fab fa-whatsapp"></i>
-                                  </a>
-                              </li>
-                          </ul>
-                      </nav>
-                  </div>
-              </div>
-          </div>
-      </header>
-      <!--FIM HOME-->
-      <!--INICIO ABOUT-->
-      <section id="about" class="about py-5">
+        <!--INICIO HOME-->
+        <header id="home" class="home d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
-                <!-- Coluna da Imagem -->
-                <div class="col-12 col-md-5 mb-4 mb-md-0">
-                    <figure class="about-img text-center">
-                        <img src="assets/images/img_about.png" alt="Minha Foto" class="img-fluid rounded-circle shadow-lg">
-                        <figcaption>Foto do desenvolvedor Front-End</figcaption>
-                    </figure>
-                </div>
-                
                 <!-- Coluna do Texto -->
-                <div class="col-12 col-md-7">
-                    <header>
-                        <h2 class="text-center text-md-start fw-bold mb-4">Sobre mim</h2>
-                    </header>
-                    
-                    <p class="lead text-light text-center text-md-start mb-4">
-                        Sou um desenvolvedor Front-End apaixonado por criar experiências digitais únicas. Gosto de trabalhar com
-                        tecnologias modernas e soluções criativas para tornar cada projeto especial.
+                <section class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <h1 class="fw-bold">
+                        Olá, sou <span id="typed" class="text-primary"</span>
+                    </h1>
+                    <p class="lead text-light">
+                        Desenvolvedor Front-End focado em criar sites e landing pages.
                     </p>
+                    <a href="assets/docs/CV_Bruno_Mariano.pdf" class="btn btn-light btn-lg mt-3" download>
+                        Download do CV
+                    </a>
+                </section>
+            
+                <!-- Coluna da Imagem -->
+                <section class="col-12 col-md-6 text-center">
+                    <figure>
+                        <img src="assets/images/img-lateral.png" alt="Foto de Bruno Mariano, desenvolvedor Front-End" class="rounded-circle img-fluid shadow-lg">
+                        <figcaption>Bruno Mariano - Desenvolvedor Front-End</figcaption>
+                    </figure>
                     
-                    <!-- Seção de Habilidades -->
-                    <section>
-                        <div class="row">
-                            <div class="col-6 mb-3">
-                                <header>
-                                    <h3 class="h5 text-light">Habilidades</h3>
-                                </header>
-                                <ul class="list-unstyled">
-                                    <li><i class="bi bi-check-circle"></i> HTML, CSS, JavaScript</li>
-                                    <li><i class="bi bi-check-circle"></i> React, Vue.js</li>
-                                    <li><i class="bi bi-check-circle"></i> Git & GitHub</li>
-                                    <li><i class="bi bi-check-circle"></i> Responsividade e Acessibilidade</li>
-                                </ul>
-                            </div>
-    
-                            <!-- Seção de Ferramentas -->
-                            <div class="col-6 mb-3">
-                                <header>
-                                    <h3 class="h5 text-light">Ferramentas</h3>
-                                </header>
-                                <ul class="list-unstyled">
-                                    <li><i class="bi bi-check-circle"></i> VS Code, Figma</li>
-                                    <li><i class="bi bi-check-circle"></i> Bootstrap, Tailwind CSS</li>
-                                    <li><i class="bi bi-check-circle"></i> Node.js, NPM</li>
-                                    <li><i class="bi bi-check-circle"></i> Jest, Cypress</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+                    <!-- Redes Sociais -->
+                    <nav aria-label="Redes sociais" class="social-icons mt-4">
+                        <ul class="list-unstyled d-flex justify-content-center gap-3">
+                            <li>
+                                <a href="https://www.instagram.com/brunodeve/" class="social-icon instagram" aria-label="Instagram" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/bruno-silva-75bab0192/" class="social-icon linkedin" aria-label="LinkedIn" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/profile.php?id=61567845955257&locale=pt_BR" class="social-icon facebook" aria-label="Facebook" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/brunosilvamariano?tab=repositories" class="social-icon github" aria-label="GitHub" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/5547991597258" class="social-icon whatsapp" aria-label="WhatsApp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
             </div>
         </div>
-      </section>
-      <!--FIM ABOUT-->
-      <!--INICIO PORTFOLIO-->
-      <section id="portfolio" class="portfolio py-5">
-        <div class="container">
-            <header>
-                <h2 class="text-center mb-5">Meu Portfólio</h2>
+        </header>
+        <!-- FIM HOME -->
+        <!--INICIO ABOUT-->
+        <section id="about" class="about py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Coluna da Imagem -->
+                    <div class="col-12 col-md-5 mb-4 mb-md-0">
+                        <figure class="about-img text-center">
+                            <img src="assets/images/img_about.png" alt="Minha Foto" class="img-fluid rounded-circle shadow-lg">
+                            <figcaption>Foto do desenvolvedor Front-End</figcaption>
+                        </figure>
+                    </div>
+                    
+                    <!-- Coluna do Texto -->
+                    <div class="col-12 col-md-7">
+                        <header>
+                            <h2 class="text-center text-md-start fw-bold mb-4">Sobre mim</h2>
+                        </header>
+                        
+                        <p class="lead text-light text-center text-md-start mb-4">
+                            Sou estudante e especializado em criar sites e landing pages utilizando HTML, CSS, JavaScript e Bootstrap. Meu foco é entregar páginas responsivas, funcionais e visualmente atrativas, sempre pensando na melhor experiência para o usuário
+
+                        </p>
+                        
+                        <!-- Seção de Habilidades -->
+                        <section>
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <header>
+                                        <h3 class="h5 text-light">Habilidades</h3>
+                                    </header>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle"></i> HTML, CSS, JavaScript</li>
+                                        <li><i class="bi bi-check-circle"></i> Git & GitHub</li>
+                                        <li><i class="bi bi-check-circle"></i> Responsividade e Acessibilidade</li>
+                                    </ul>
+                                </div>
+        
+                                <!-- Seção de Ferramentas -->
+                                <div class="col-6 mb-3">
+                                    <header>
+                                        <h3 class="h5 text-light">Ferramentas</h3>
+                                    </header>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle"></i> VS Code, Figma</li>
+                                        <li><i class="bi bi-check-circle"></i> Bootstrap, Tailwind CSS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FIM ABOUT-->
+        <!--INICIO PORTFOLIO-->
+        <section id="portfolio" class="portfolio py-5">
+            <div class="container">
+                <header>
+                    <h2 class="text-center mb-5">Meu Portfólio</h2>
+                </header>
+                <div class="row">
+                    <!-- Projeto 1 -->
+                    <article class="col-md-4 mb-4">
+                        <figure class="portfolio-item position-relative">
+                            <img src="assets/images/higienizacao.png" alt="Descrição do Projeto 1" class="img-fluid rounded">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a href="https://higienizacaofritz.netlify.app/" class="portfolio-link text-white" target="_blank" aria-label="Ver detalhes do Projeto 1">Ver Detalhes</a>
+                            </div>
+                        </figure>
+                    </article>
+                    
+                    <!-- Projeto 2 -->
+                    <article class="col-md-4 mb-4">
+                        <figure class="portfolio-item position-relative">
+                            <img src="assets/images/barbearia.png" alt="Descrição do Projeto 2" class="img-fluid rounded">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a href="https://ourstylebarber.netlify.app/" class="portfolio-link text-white" target="_blank" aria-label="Ver detalhes do Projeto 2">Ver Detalhes</a>
+                            </div>
+                        </figure>
+                    </article>
+                    
+                    <!-- Projeto 3 -->
+                    <article class="col-md-4 mb-4">
+                        <figure class="portfolio-item position-relative">
+                            <img src="assets/images/breve.png" alt="Descrição do Projeto 3" class="img-fluid rounded">
+                            <div class="portfolio-overlay d-flex align-items-center justify-content-center">
+                                <a href="detalhes_projeto3.html" class="portfolio-link text-white" target="_blank" aria-label="Ver detalhes do Projeto 3">Ver Detalhes</a>
+                            </div>
+                        </figure>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!--FIM PORTFOLIO-->
+        <!--INICIO BLOG-->
+        <section id="blog" class="blog py-5">
+            <div class="container">
+            <header class="text-center mb-5">
+                <h2 class="text">Blog para Iniciantes em Programação</h2>
+                <p class="text-light">Dicas e artigos sobre os primeiros passos no mundo da programação e como se tornar um desenvolvedor.</p>
             </header>
             <div class="row">
-                <!-- Projeto 1 -->
-                <article class="col-md-4 mb-4">
-                    <figure class="portfolio-item position-relative">
-                        <img src="assets/images/breve.png" alt="Descrição do Projeto 1" class="img-fluid rounded">
-                        <figcaption class="portfolio-description position-absolute w-100 text-center p-3">
-                            <p>Descrição curta do Projeto 1 - Desenvolvimento de um site para portfólio.</p>
-                        </figcaption>
-                        <div class="portfolio-overlay d-flex align-items-center justify-content-center">
-                            <a href="detalhes_projeto1.html" class="portfolio-link text-white" target="_blank" aria-label="Ver detalhes do Projeto 1">Ver Detalhes</a>
-                        </div>
-                    </figure>
+                <!-- Post 1 -->
+                <article class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="blog-item">
+                    <img src="assets/images/blog.png" alt="Post 1" class="img-fluid rounded mb-3">
+                    <div class="blog-item-content">
+                    <h3 class="blog-item-title text-light">Primeiros Passos no Desenvolvimento Web</h3>
+                    <p class="blog-item-excerpt text-light">Aprenda os fundamentos essenciais para começar sua jornada como desenvolvedor web: HTML, CSS e JavaScript.</p>
+                    <a href="https://exemplo.com/artigo-programacao-1" class="blog-link" target="_blank" rel="noopener noreferrer">Ler mais...</a>
+                    </div>
+                </div>
                 </article>
                 
-                <!-- Projeto 2 -->
-                <article class="col-md-4 mb-4">
-                    <figure class="portfolio-item position-relative">
-                        <img src="assets/images/breve.png" alt="Descrição do Projeto 2" class="img-fluid rounded">
-                        <figcaption class="portfolio-description position-absolute w-100 text-center p-3">
-                            <p>Descrição curta do Projeto 2 - Criação de landing page responsiva.</p>
-                        </figcaption>
-                        <div class="portfolio-overlay d-flex align-items-center justify-content-center">
-                            <a href="detalhes_projeto2.html" class="portfolio-link text-white" target="_blank" aria-label="Ver detalhes do Projeto 2">Ver Detalhes</a>
-                        </div>
-                    </figure>
+                <!-- Post 2 -->
+                <article class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="blog-item">
+                    <img src="assets/images/blog.png" alt="Post 2" class="img-fluid rounded mb-3">
+                    <div class="blog-item-content">
+                    <h3 class="blog-item-title text-light">Introdução ao Git e GitHub</h3>
+                    <p class="blog-item-excerpt text-light">Descubra como versionar seu código e colaborar com outros desenvolvedores usando Git e GitHub.</p>
+                    <a href="https://exemplo.com/artigo-programacao-2" class="blog-link" target="_blank" rel="noopener noreferrer">Ler mais...</a>
+                    </div>
+                </div>
                 </article>
                 
-                <!-- Projeto 3 -->
-                <article class="col-md-4 mb-4">
-                    <figure class="portfolio-item position-relative">
-                        <img src="assets/images/breve.png" alt="Descrição do Projeto 3" class="img-fluid rounded">
-                        <figcaption class="portfolio-description position-absolute w-100 text-center p-3">
-                            <p>Descrição curta do Projeto 3 - Desenvolvimento de uma aplicação web com React.</p>
-                        </figcaption>
-                        <div class="portfolio-overlay d-flex align-items-center justify-content-center">
-                            <a href="detalhes_projeto3.html" class="portfolio-link text-white" target="_blank" aria-label="Ver detalhes do Projeto 3">Ver Detalhes</a>
-                        </div>
-                    </figure>
+                <!-- Post 3 -->
+                <article class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="blog-item">
+                    <img src="assets/images/blog.png" alt="Post 3" class="img-fluid rounded mb-3">
+                    <div class="blog-item-content">
+                    <h3 class="blog-item-title text-light">Desenvolvendo Sua Primeira Página Responsiva</h3>
+                    <p class="blog-item-excerpt text-light">Entenda os princípios de design responsivo e como criar sites que funcionam bem em dispositivos móveis.</p>
+                    <a href="https://exemplo.com/artigo-programacao-3" class="blog-link" target="_blank" rel="noopener noreferrer">Ler mais...</a>
+                    </div>
+                </div>
                 </article>
             </div>
-        </div>
-      </section>
-      <!--FIM PORTFOLIO-->
-      <!--INICIO BLOG-->
-      <section id="blog" class="blog py-5">
-        <div class="container">
-          <header class="text-center mb-5">
-            <h2 class="text">Blog para Iniciantes em Programação</h2>
-            <p class="text-light">Dicas e artigos sobre os primeiros passos no mundo da programação e como se tornar um desenvolvedor.</p>
-          </header>
-          <div class="row">
-            <!-- Post 1 -->
-            <article class="col-lg-4 col-md-6 col-12 mb-4">
-              <div class="blog-item">
-                <img src="assets/images/blog.png" alt="Post 1" class="img-fluid rounded mb-3">
-                <div class="blog-item-content">
-                  <h3 class="blog-item-title text-light">Primeiros Passos no Desenvolvimento Web</h3>
-                  <p class="blog-item-excerpt text-light">Aprenda os fundamentos essenciais para começar sua jornada como desenvolvedor web: HTML, CSS e JavaScript.</p>
-                  <a href="https://exemplo.com/artigo-programacao-1" class="blog-link" target="_blank" rel="noopener noreferrer">Ler mais...</a>
-                </div>
-              </div>
-            </article>
-            
-            <!-- Post 2 -->
-            <article class="col-lg-4 col-md-6 col-12 mb-4">
-              <div class="blog-item">
-                <img src="assets/images/blog.png" alt="Post 2" class="img-fluid rounded mb-3">
-                <div class="blog-item-content">
-                  <h3 class="blog-item-title text-light">Introdução ao Git e GitHub</h3>
-                  <p class="blog-item-excerpt text-light">Descubra como versionar seu código e colaborar com outros desenvolvedores usando Git e GitHub.</p>
-                  <a href="https://exemplo.com/artigo-programacao-2" class="blog-link" target="_blank" rel="noopener noreferrer">Ler mais...</a>
-                </div>
-              </div>
-            </article>
-            
-            <!-- Post 3 -->
-            <article class="col-lg-4 col-md-6 col-12 mb-4">
-              <div class="blog-item">
-                <img src="assets/images/blog.png" alt="Post 3" class="img-fluid rounded mb-3">
-                <div class="blog-item-content">
-                  <h3 class="blog-item-title text-light">Desenvolvendo Sua Primeira Página Responsiva</h3>
-                  <p class="blog-item-excerpt text-light">Entenda os princípios de design responsivo e como criar sites que funcionam bem em dispositivos móveis.</p>
-                  <a href="https://exemplo.com/artigo-programacao-3" class="blog-link" target="_blank" rel="noopener noreferrer">Ler mais...</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <!--FIM BLOG-->
+            </div>
+        </section>
+        <!--FIM BLOG-->
     </main>
     <footer id="footer" class="bg-dark text-light py-5">
       <div class="container">
@@ -289,9 +286,9 @@
           <div class="col-md-4 mb-4">
             <h3 class="text-danger">Redes Sociais</h3>
             <div class="d-flex justify-content-center justify-content-md-start gap-3">
-              <a href="https://linkedin.com/seulinkedin" target="_blank" class="text-light fs-4"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com/seugithub" target="_blank" class="text-light fs-4"><i class="fab fa-github"></i></a>
-              <a href="https://instagram.com/seuinstagram" target="_blank" class="text-light fs-4"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/bruno-silva-75bab0192/" target="_blank" class="text-light fs-4"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/brunosilvamariano?tab=repositories" target="_blank" class="text-light fs-4"><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/brunodeve/" target="_blank" class="text-light fs-4"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
     
@@ -303,19 +300,6 @@
         </div>
       </div>
     </footer>
-    
-    
-    
-    
-    
-    
-          
-  
-    
-
-    
-    
-
     <!-- -------------------------------
          Função de Rolagem Suave
     ------------------------------- -->
